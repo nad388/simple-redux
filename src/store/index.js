@@ -5,7 +5,7 @@ import { customerReducer } from './customerReducer';
 
 const rootReducer = combineReducers({
   cash: cashReducer,
-  customer: customerReducer,
+  customers: customerReducer,
 });
 
 export const store = createStore(rootReducer, composeWithDevTools());
