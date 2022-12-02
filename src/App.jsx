@@ -5,6 +5,7 @@ import {
   removeCustomerAction,
 } from './store/customerReducer';
 import { addCashAction, getCashAction } from './store/cashReducer';
+import { fetchCustomers } from './asyncActions/customers';
 
 function App() {
   const dispatch = useDispatch();
@@ -39,6 +40,9 @@ function App() {
           Снять со счета
         </button>
         <button onClick={() => addCustomer(prompt())}>Добавить клиента</button>
+        <button onClick={() => dispatch(fetchCustomers())}>
+          Получить клиентов из базы данных
+        </button>
         <button onClick={() => getCash(Number(prompt()))}>
           Удалить клиента
         </button>
